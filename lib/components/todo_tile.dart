@@ -16,12 +16,12 @@ class ToDoTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
       child: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: const Color(0xFF9ACBD0),
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(10),
           ),
         child: Row(
           children: [
