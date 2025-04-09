@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     ["Task 2", true],
   ];
 
-  // checkbox onpress
+  // checkbox on press
   void checkBoxChanged(bool? value, int index) {
     setState(() {
       toDoList[index][1] = !toDoList[index][1];
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   // save new task
   void saveNewTask() {
     setState(() {
-      toDoList.add([ _controller.text, false ]);
+      toDoList.add([_controller.text, false]);
       _controller.clear();
     });
     Navigator.of(context).pop();
@@ -45,10 +45,23 @@ class _HomePageState extends State<HomePage> {
           controller: _controller,
           onSave: saveNewTask,
           onCancel: () => Navigator.of(context).pop(),
-
         );
-      }
+      },
     );
+  }
+
+  // delete task
+  void deleteTask(int index) {
+    setState(() {
+      toDoList.removeAt(index);
+    });
+  }
+
+  // delete all completed tasks
+  void deleteCompleted() {
+    setState(() {
+      toDoList.removeWhere((task) => task[1] == true);
+    });
   }
 
   @override
@@ -57,19 +70,18 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: const Color(0xFF00575E),
       appBar: AppBar(
         backgroundColor: const Color(0xFF48A6A7),
-        title: Text('To Do'),
+        title: Text(
+          'To Do',
+          style: TextStyle(
+            fontFamily: 'Roboto',
+            fontSize: 25,
+            fontWeight: FontWeight.w900,
+          ),
+          ),
         centerTitle: true,
         elevation: 0,
       ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: createNewTask,
-        backgroundColor: Color(0xFF48A6A7), // Color de fondo (tu color personalizado)
-        foregroundColor: Colors.white,     // Color del ícono
-        child:
-          const Icon(Icons.add),
-      ),
-
+      
       body: ListView.builder(
         itemCount: toDoList.length,
         itemBuilder: (context, index) {
@@ -77,9 +89,39 @@ class _HomePageState extends State<HomePage> {
             taskName: toDoList[index][0], 
             taskCompleted: toDoList[index][1], 
             onChanged: (value) => checkBoxChanged(value, index),
+            deleteFunction: (context) => deleteTask(index),
           );
         },
-      )
+      ),
+
+      // Stack to overlay two FABs
+      floatingActionButton: Stack(
+        children: [
+          // FAB to add a new task (Positioned to the left)
+          Positioned(
+            bottom: 10,
+            right: 15,  
+            child: FloatingActionButton(
+              onPressed: createNewTask,
+              backgroundColor: const Color(0xFF48A6A7),
+              foregroundColor: Colors.white,
+              child: const Icon(Icons.add),
+            ),
+          ),
+
+          // FAB to delete all completed tasks (Positioned to the right)
+          Positioned(
+            bottom: 10,  
+            left: MediaQuery.of(context).size.width * 0.1,  
+            child: FloatingActionButton(
+              onPressed: deleteCompleted,  
+              backgroundColor: const Color.fromARGB(255, 1, 50, 56),
+              foregroundColor: Colors.white,
+              child: const Icon(Icons.delete_forever),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
