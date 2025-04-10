@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:to_do_app_hive_v1/components/dialog_box.dart';
 import 'package:to_do_app_hive_v1/components/todo_tile.dart';
 
@@ -10,14 +11,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // reff the hive box
+  final _myBox = Hive.openBox('mybox');
 
   // text controller
   final _controller = TextEditingController();
 
   // list of todo tasks
   List toDoList = [
-    ["Task 1", false],
-    ["Task 2", true],
+    ["+ icon to create task", false],
+    ["checkbox to mark as done", true],
+    ["swipe left to delete task", false],
+    ["trash deletes all done tasks", false],
   ];
 
   // checkbox on press
@@ -83,14 +88,19 @@ class _HomePageState extends State<HomePage> {
       ),
       
       body: ListView.builder(
-        itemCount: toDoList.length,
+        itemCount: toDoList.length + 1, // +1 para agregar un espacio al final
         itemBuilder: (context, index) {
-          return ToDoTile(
-            taskName: toDoList[index][0], 
-            taskCompleted: toDoList[index][1], 
-            onChanged: (value) => checkBoxChanged(value, index),
-            deleteFunction: (context) => deleteTask(index),
-          );
+          if (index < toDoList.length) {
+            return ToDoTile(
+              taskName: toDoList[index][0], 
+              taskCompleted: toDoList[index][1], 
+              onChanged: (value) => checkBoxChanged(value, index),
+              deleteFunction: (context) => deleteTask(index),
+            );
+          } else {
+            // Espacio final
+            return const SizedBox(height: 100);
+          }
         },
       ),
 
