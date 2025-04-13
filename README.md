@@ -16,6 +16,12 @@
 - 🗑️ Eliminar tarea con un swipe ⬅️.
 - 🧹 Limpiar todas las tareas hechas de una vez
 
+### futuras características
+- tags y filtrado de tareas
+- notificacion de recordatorio y fechas limite
+- heatmap de tareas completadas
+- widget android
+
 ## 🔎 Cómo usar la app
 
 1. **Agregar tarea:**
