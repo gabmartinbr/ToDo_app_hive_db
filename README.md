@@ -4,7 +4,6 @@
 
 ## 📷 Screenshots
 <div style="display: flex; justify-content: space-between; padding: 10px;">
-  <img src="https://github.com/user-attachments/assets/d664a11a-9f7a-4b79-9c19-867c1b54002b" alt="Pantalla principal" style="width: 33%; height: auto; padding: 5px;"/>
   <img src="https://github.com/user-attachments/assets/eff805c3-d094-446b-9b91-9b724d40b127" alt="Vista de tarea completada" style="width: 33%; height: auto; padding: 5px;"/>
   <img src="https://github.com/user-attachments/assets/96402aa4-59e8-4cf8-b4c5-010ff444a366" alt="Configuración de tareas" style="width: 33%; height: auto; padding: 5px;"/>
 </div>
