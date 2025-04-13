@@ -5,13 +5,11 @@
 ## Screenshots
 
 ### Pantalla inicial:
-![Pantalla principal](ruta/a/la/primera_imagen.png)
-
-### Completar Tarea:
-![Vista de tarea completada](ruta/a/la/segunda_imagen.png)
-
-### Añadir Tarea:
-![Configuración de tareas](ruta/a/la/tercera_imagen.png)
+<div style="display: flex; justify-content: space-between; padding: 10px;">
+  <img src="ruta/a/la/primera_imagen.png" alt="Pantalla principal" style="width: 30%; height: auto; padding: 5px;"/>
+  <img src="ruta/a/la/segunda_imagen.png" alt="Vista de tarea completada" style="width: 30%; height: auto; padding: 5px;"/>
+  <img src="ruta/a/la/tercera_imagen.png" alt="Configuración de tareas" style="width: 30%; height: auto; padding: 5px;"/>
+</div>
 
 ## Características
 
