@@ -38,9 +38,7 @@
 
 ## Descargar la APK
 
-Si prefieres usar la versión móvil de la aplicación, puedes descargar el APK desde el siguiente enlace:
-
-[Descargar APK](build/app/outputs/flutter-apk/app-release.apk)  
+Si prefieres usar la versión móvil de la aplicación, puedes descargar el APK desde [AQUÍ](build/app/outputs/flutter-apk/app-release.apk)  
 
 Sigue los siguientes pasos para instalar la APK:
 
@@ -53,9 +51,13 @@ Sigue los siguientes pasos para instalar la APK:
 ## Usar la versión web en local
 
 Si prefieres probar la versión web en tu máquina local, puedes hacerlo siguiendo estos pasos:
+(debes tener python3 instalado)
 
-### 1. Clonar el repositorio
+### 1. Clonar el repositorio y crear servidor python en local
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
+git clone https://github.com/gabmartinbr/ToDo_app_hive_db.git
+cd build/web
+python -m http.server 8000
+```
+Esto levantará un servidor local en el puerto 8000. Ahora, abre tu navegador y ve a http://localhost:8000 para ver la aplicación en acción.
