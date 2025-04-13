@@ -1,40 +1,39 @@
-# To-Do App with Hive
+# 📋To-Do App with Hive DB 💽
 
-¡Bienvenido a la aplicación To-Do que utiliza Hive para almacenar tareas! Esta aplicación te permite agregar, eliminar y marcar tareas como completadas. Puedes utilizarla tanto en dispositivos móviles (Android) como en la versión web.
+¡Bienvenido a la aplicación To-Do que utiliza Hive para almacenar tareas en una base de datos NoSQL local! Esta aplicación te permite agregar, eliminar y marcar tareas como completadas.
 
-## Screenshots
-
-### Pantalla inicial:
+## 📷 Screenshots
 <div style="display: flex; justify-content: space-between; padding: 10px;">
-  <img src="ruta/a/la/primera_imagen.png" alt="Pantalla principal" style="width: 30%; height: auto; padding: 5px;"/>
-  <img src="ruta/a/la/segunda_imagen.png" alt="Vista de tarea completada" style="width: 30%; height: auto; padding: 5px;"/>
-  <img src="ruta/a/la/tercera_imagen.png" alt="Configuración de tareas" style="width: 30%; height: auto; padding: 5px;"/>
+  <img src="https://github.com/user-attachments/assets/d664a11a-9f7a-4b79-9c19-867c1b54002b" alt="Pantalla principal" style="width: 33%; height: auto; padding: 5px;"/>
+  <img src="https://github.com/user-attachments/assets/eff805c3-d094-446b-9b91-9b724d40b127" alt="Vista de tarea completada" style="width: 33%; height: auto; padding: 5px;"/>
+  <img src="https://github.com/user-attachments/assets/96402aa4-59e8-4cf8-b4c5-010ff444a366" alt="Configuración de tareas" style="width: 33%; height: auto; padding: 5px;"/>
 </div>
 
-## Características
 
-- Agregar tareas nuevas.
-- Marcar tareas como completadas.
-- Eliminar tareas completadas.
-- Interfaz de usuario sencilla y rápida.
+## ⭐ Características
 
-## Cómo usar la app
+- 🆕 Agregar tareas nuevas.
+- ✅ Marcar tareas como completadas.
+- 🗑️ Eliminar tarea con un swipe ⬅️.
+- 🧹 Limpiar todas las tareas hechas de una vez
+
+## 🔎 Cómo usar la app
 
 1. **Agregar tarea:**
-   Para agregar una tarea, simplemente presiona el botón de "+" en la parte inferior derecha de la pantalla principal.
+   Para agregar una tarea, simplemente presiona el botón de ➕ en la parte inferior derecha de la pantalla principal.
 
 2. **Marcar tarea como completada:**
-   Puedes marcar cualquier tarea como completada utilizando el checkbox.
+   Puedes marcar cualquier tarea como completada utilizando el checkbox ✅
 
 3. **Eliminar tarea:**
-   Si deseas eliminar una tarea, desliza hacia la izquierda en la tarea para acceder a la opción de eliminar.
+   Si deseas eliminar una tarea, desliza hacia ⬅️ en la tarea para acceder a la opción de eliminar
 
 4. **Eliminar tareas completadas:**
-   Si deseas eliminar todas las tareas completadas, puedes hacerlo presionando el botón de la papelera en la parte inferior izquierda de la pantalla.
+   Si deseas eliminar todas las tareas completadas, puedes hacerlo presionando el botón de 🗑️ en la parte inferior izquierda de la pantalla.
 
 ---
 
-## Descargar la APK
+## 📁 Descargar la APK
 
 Si prefieres usar la versión móvil de la aplicación, puedes descargar el APK desde [AQUÍ](build/app/outputs/flutter-apk/app-release.apk)  
 
@@ -46,7 +45,7 @@ Sigue los siguientes pasos para instalar la APK:
 
 ---
 
-## Usar la versión web en local
+## 🌐 Usar la versión web en local
 
 Si prefieres probar la versión web en tu máquina local, puedes hacerlo siguiendo estos pasos:
 (debes tener python3 instalado)
