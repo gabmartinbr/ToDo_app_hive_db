@@ -4,8 +4,10 @@
 
 ## 📷 Screenshots
 <div style="display: flex; justify-content: space-between; padding: 10px;">
-  <img src="https://github.com/user-attachments/assets/eff805c3-d094-446b-9b91-9b724d40b127" alt="Vista de tarea completada" style="width: 30%; height: auto; padding: 5px;"/>
-  <img src="https://github.com/user-attachments/assets/96402aa4-59e8-4cf8-b4c5-010ff444a366" alt="Configuración de tareas" style="width: 30%; height: auto; padding: 5px;"/>
+  <img src="https://github.com/user-attachments/assets/eff805c3-d094-446b-9b91-9b724d40b127" alt="Vista de tarea completada" style="width: 33%; height: auto; padding: 5px;"/>
+  <img src="https://github.com/user-attachments/assets/96402aa4-59e8-4cf8-b4c5-010ff444a366" alt="Configuración de tareas" style="width: 33%; height: auto; padding: 5px;"/>
+  <img src="https://github.com/user-attachments/assets/4e834ac9-71d4-4b1d-aba4-04d8bd59550f" alt="Configuración de tareas" style="width: 33%; height: auto; padding: 5px;"/>
+  
 </div>
 
 
@@ -17,6 +19,7 @@
 - 🧹 Limpiar todas las tareas hechas de una vez
 
 ### futuras características
+- modo claro y oscuro ✅
 - tags y filtrado de tareas
 - notificacion de recordatorio y fechas limite
 - heatmap de tareas completadas
