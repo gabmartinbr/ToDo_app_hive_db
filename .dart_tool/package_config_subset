@@ -214,6 +214,10 @@ mime
 3.2
 file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/mime-2.0.0/
 file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/mime-2.0.0/lib/
+nested
+2.12
+file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0/
+file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/nested-1.0.0/lib/
 package_config
 3.4
 file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/package_config-2.2.0/
@@ -266,6 +270,10 @@ posix
 3.0
 file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/posix-6.0.1/
 file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/posix-6.0.1/lib/
+provider
+2.12
+file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.4/
+file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/provider-6.1.4/lib/
 pub_semver
 3.4
 file:///C:/Users/Gab/AppData/Local/Pub/Cache/hosted/pub.dev/pub_semver-2.2.0/

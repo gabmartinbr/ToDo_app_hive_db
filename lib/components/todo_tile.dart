@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:provider/provider.dart';
+import 'package:to_do_app_hive_v1/theme/theme_provider.dart';
 
 class ToDoTile extends StatelessWidget {
   final String taskName;
   final bool taskCompleted;
-  Function(bool?)? onChanged;
-  Function(BuildContext)? deleteFunction;
+  final Function(bool?)? onChanged;
+  final Function(BuildContext)? deleteFunction;
 
   ToDoTile({
     super.key, 
@@ -15,9 +17,11 @@ class ToDoTile extends StatelessWidget {
     required this.deleteFunction,
   });
 
-
   @override
   Widget build(BuildContext context) {
+    // Obtener el tema actual
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
       child: Slidable(
@@ -25,9 +29,9 @@ class ToDoTile extends StatelessWidget {
           motion: StretchMotion(), 
           children: [
             SlidableAction(
-              onPressed: (deleteFunction),
+              onPressed: (context) => deleteFunction?.call(context),
               icon: Icons.delete,
-              backgroundColor: const Color.fromARGB(255, 1, 50, 56),
+              backgroundColor: themeProvider.currentTheme.checkboxTheme.side?.color ?? Colors.transparent,
               borderRadius: BorderRadius.circular(15),
             )
           ],
@@ -35,17 +39,20 @@ class ToDoTile extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: const Color(0xFF9ACBD0),
+            color: themeProvider.currentTheme.cardColor, // Usar el color de tarjeta del tema
             borderRadius: BorderRadius.circular(10),
-            ),
+          ),
           child: Row(
             children: [
               // checkbox
               Checkbox(
-                value: taskCompleted, 
+                value: taskCompleted, // El valor del checkbox (marcado o no)
                 onChanged: onChanged,
-                activeColor: const Color.fromARGB(255, 1, 50, 56),
-                ),
+                activeColor: taskCompleted
+                    ? themeProvider.currentTheme.scaffoldBackgroundColor // Color cuando está marcado
+                    : themeProvider.currentTheme.colorScheme.secondary, // Color cuando NO está marcado
+                checkColor: themeProvider.currentTheme.floatingActionButtonTheme.foregroundColor, // Color del ícono del checkbox (marca)
+              ),
         
               // taskname
               Text(
@@ -55,9 +62,11 @@ class ToDoTile extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
                   decoration: taskCompleted
-                  ? TextDecoration.lineThrough
-                  : TextDecoration.none),
+                      ? TextDecoration.lineThrough
+                      : TextDecoration.none,
+                  color: themeProvider.currentTheme.textTheme.bodyLarge?.color, // Usar el color del texto según el tema
                 ),
+              ),
             ],
           ),
         ),
