@@ -2,25 +2,22 @@ import 'package:flutter/material.dart';
 
 final lightTheme = ThemeData(
   brightness: Brightness.light,
-  scaffoldBackgroundColor: const Color(0xFF00575E),
+  scaffoldBackgroundColor: Color(0xFF89A8B2),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Color(0xFF48A6A7),
-    foregroundColor: Colors.white,
+    backgroundColor: Color(0xFFB3C8CF),
+    foregroundColor: Color(0xFF3B484D),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFF48A6A7),
-    foregroundColor: Colors.white,
+    backgroundColor: Color.fromARGB(255, 104, 123, 131),
+    foregroundColor: Color(0xFFF1F0E8),
   ),
   checkboxTheme: CheckboxThemeData(
-    fillColor: WidgetStateProperty.all(const Color(0xFF48A6A7)),
-    side: const BorderSide(color: const Color(0xFF48A6A7)), // Establecer el borde como blanco
+    fillColor: WidgetStateProperty.all(Color(0xFFF1F0E8)),
+    side: const BorderSide(color: Color(0xFFF1F0E8))
   ),
-  cardColor: const Color.fromARGB(255, 142, 199, 206),
+  cardColor: const Color(0xFFE5E1DA),
   textTheme: const TextTheme(
-    bodyLarge: TextStyle(color: Color.fromARGB(255, 34, 34, 34)),
-  ),
-  colorScheme: ColorScheme.fromSwatch().copyWith(
-    secondary: Colors.teal,
+    bodyLarge: TextStyle(color: Color(0xFF3B484D)),
   ),
 );
 
@@ -32,7 +29,7 @@ final darkTheme = ThemeData(
     foregroundColor: Colors.white,
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFF444444),
+    backgroundColor: Color.fromARGB(255, 255, 54, 54),
     foregroundColor: Colors.white,
   ),
   checkboxTheme: CheckboxThemeData(

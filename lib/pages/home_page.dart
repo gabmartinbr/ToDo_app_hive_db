@@ -89,6 +89,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: themeProvider.currentTheme.scaffoldBackgroundColor, // Usar color del tema
       appBar: AppBar(
         backgroundColor: themeProvider.currentTheme.appBarTheme.backgroundColor, // Usar color del tema
+        foregroundColor: themeProvider.currentTheme.appBarTheme.foregroundColor,
         title: const Text(
           'To Do',
           style: TextStyle(
@@ -132,7 +133,7 @@ class _HomePageState extends State<HomePage> {
           // FAB to add a new task (Positioned to the left)
           Positioned(
             bottom: 10,
-            right: 15,  
+            right: 5,  
             child: FloatingActionButton(
               onPressed: createNewTask,
               backgroundColor: themeProvider.currentTheme.floatingActionButtonTheme.backgroundColor, // Usar color del tema
