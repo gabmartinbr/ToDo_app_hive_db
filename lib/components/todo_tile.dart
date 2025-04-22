@@ -55,16 +55,20 @@ class ToDoTile extends StatelessWidget {
               ),
         
               // taskname
-              Text(
-                taskName,
-                style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  decoration: taskCompleted
-                      ? TextDecoration.lineThrough
-                      : TextDecoration.none,
-                  color: themeProvider.currentTheme.textTheme.bodyLarge?.color, // Usar el color del texto según el tema
+              Flexible(
+                child: Text(
+                  taskName,
+                  softWrap: true, // Permite salto de línea
+                  overflow: TextOverflow.visible, // Asegura que se muestre todo
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    decoration: taskCompleted
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none,
+                    color: themeProvider.currentTheme.textTheme.bodyLarge?.color,
+                  ),
                 ),
               ),
             ],
